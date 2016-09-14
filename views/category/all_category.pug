@@ -1,0 +1,15 @@
+extends ../layout
+
+block content
+  h2 All Category
+  hr
+
+  table
+    thead
+    tbody
+    for category in categories
+      tr
+        td= category.id
+        td= category.name
+        td
+          button.btn.btn.btn-primary(type='submit', value='Edit Category')

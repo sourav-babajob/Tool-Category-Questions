@@ -1,0 +1,20 @@
+extends ../layout
+
+block content
+  h2 New Category
+  hr
+  form.form-horizontal(action='/category/new', method='POST')
+    input(type='hidden', name='_csrf', value=_csrf)
+    .form-group
+      label.col-sm-3.control-label(for='ID') Category ID
+      .col-sm-7
+        input.form-control(type='number', name='ID', id='ID')
+    .form-group
+      label.col-sm-3.control-label(for='name') Category Name
+      .col-sm-7
+        input.form-control(type='text', name='name', id='name')
+    .form-group
+      .col-sm-offset-3.col-sm-4
+        button.btn.btn.btn-primary(type='submit')
+          i.fa.fa-pencil
+          | Save Category
